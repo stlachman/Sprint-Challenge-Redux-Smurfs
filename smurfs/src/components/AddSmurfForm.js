@@ -16,7 +16,7 @@ class AddSmurfForm extends React.Component {
 	handleChange = (event) => {
 		let value = event.target.value;
 		if (event.target.name === 'age') {
-			value = parseInt(10, value);
+			value = parseInt(value, 10);
 		}
 		this.setState({
 			...this.state,
@@ -31,9 +31,9 @@ class AddSmurfForm extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="form-container">
 				<h2>Add a smurf</h2>
-				<form onSubmit={this.handleSubmit}>
+				<form className="main-form" onSubmit={this.handleSubmit}>
 					<input
 						onChange={this.handleChange}
 						value={this.state.name}

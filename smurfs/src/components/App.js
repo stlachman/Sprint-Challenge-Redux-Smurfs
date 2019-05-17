@@ -22,7 +22,7 @@ class App extends Component {
 			<div className="container">
 				<h1>Smurfs Redux</h1>
 				{this.props.smurfs.map((smurf) => (
-					<div key={smurf.id}>
+					<div className="tile" key={smurf.id}>
 						<h3>Name: {smurf.name}</h3>
 						<p>Age: {smurf.age}</p>
 						<p>Height: {smurf.height}</p>
