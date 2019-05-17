@@ -37,7 +37,7 @@ class AddSmurfForm extends React.Component {
 	render() {
 		return (
 			<div className="form-container">
-				<h2>Add a smurf</h2>
+				<h2>Add a Smurf</h2>
 				<form className="main-form" onSubmit={this.handleSubmit}>
 					<input
 						onChange={this.handleChange}

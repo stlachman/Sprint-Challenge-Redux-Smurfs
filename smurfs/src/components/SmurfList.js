@@ -8,13 +8,8 @@ class SmurfList extends React.Component {
 		this.props.getSmurfs();
 	}
 	render() {
-		console.log(this.props);
 		if (this.props.fetchingSmurfs) {
-			return (
-				<div className="container">
-					<h1>Loading</h1>
-				</div>
-			);
+			return <h1>Loading</h1>;
 		}
 
 		return (
