@@ -12,7 +12,7 @@
 }
 
 .form-container {
-	margin: 30px 0 0;
+	margin: 30px 0 40px;
 }
 
 .form-container h2 {
@@ -28,8 +28,21 @@
 	display: block;
 	margin-top: 20px;
 	padding: 8px 5px;
+	font-size: 14px;
 }
 
 .main-form button {
 	margin-top: 15px;
+	background: #7fb27f;
+	color: #fff;
+	transition: 0.28s opacity ease-in;
+	border: 0;
+	font-size: 15px;
+	padding: 12px 22px;
+	font-weight: bold;
+}
+
+.main-form button:hover {
+	opacity: 0.8;
+	cursor: pointer;
 }
