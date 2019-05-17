@@ -23,8 +23,20 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions send instructions as to how the UI should be updated based on an event. An action is a plain object with a type and (optionally) a payload.
+
+Reducers are pure functions which receive an action and the current state tree, and then return the next state tree which causes the UI to re-render with the new state.
+
+The store in Redux contains the application state and is the single source of truth for the application. It is known as the single source of truth because there is only one store for the entire application, and this store sends out the state to all parts of the application. 
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state describes state that affects the entire application while component state describes state particular to that component.  Application state is useful for state that needs to be accessed in multiple parts of the application. Component state should be chosen if the state is only need for that particular component. A good example of component state would be input fields on a form. The application state doesn’t need to concern itself with the state of a form input, but that state is necessary to make post requests and needs to be stored in the component state. Whereas a list of users for your site might be needed in multiple components, so it would be better for this state to be managed at the application level.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux-thunk is a piece of middleware that allows us to make asynchronous requests inside our action creators. To use a piece of middleware (like redux-thunk) we must convert our action creators into thunks or a function which returns a function. Redux-thunk intercepts each action when it is called. If the action is not a function, redux-thunk allows it to pass on to the reducer, but if the action is a function it will invoke the function and pass in the dispatch function as an argument to that function. 
 
 ## Project Set Up
 
