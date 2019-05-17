@@ -23,7 +23,6 @@ class EditSmurfForm extends React.Component {
 	};
 
 	render() {
-		console.log(this.props);
 		return (
 			<div className="form-container">
 				<h2>Edit Smurf</h2>
